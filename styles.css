@@ -9,35 +9,21 @@ body {
 
     .slide {
         width: 100%;
-        height: 500px;
+        min-height: 500px;
         position: relative;
         margin-bottom: 10px;
-        background-color: #86d0fc;
+        background-color: #97d7fc;
     }
-    /* .helpSlide {
-        background-color: #fbeff0;
-        width: 100%;
-        position: relative;
-        margin-bottom: 10px;
-    }
-    .exerciseSlide {
-        background-color: #eaf2fd;
-        width: 100%;
-        position: relative;
-        margin-bottom: 10px;
-    } */
-    .slideTitle {
+        .slideTitle {
         /* background-color: #466365; */
         color: #292929;
     }
-    /* .primaryTitle {
+    /* .title {
         font-size: 30px;
         padding: 10px 0 0 0;
-    }
-    .secondaryTitle {
-        font-size: 20px; 
-        padding: 0 0 10px 0;
     } */
+
+    /* for use if slide needs a background image */
     /* .backgroundImage {
         background-image: url("");
         background-position: center;
@@ -47,7 +33,8 @@ body {
         visibility: hidden;
     }  
     .content {
-        margin: 20px;
+        margin: 25px;
+        min-height: 325px;
     }
     .note {
         color: #575656;
@@ -56,6 +43,9 @@ body {
     .alert {
         color: #CC444B;
         font-size: .85em;
+    }
+    .highlight {
+        background-color: #ffff99;
     }
     .pageNumber {
         margin: 20px;
@@ -68,21 +58,18 @@ body {
         border-radius: 8px;
         box-shadow: 5px 10px 18px #348de0;
     }
-    button:active, button:focus, .btn:active, .btn:focus {
-        color: #292929;
-    }
-    button.start {
-        box-shadow: 5px 10px 18px #348de0;
-        margin-top: 450px;
-        margin-bottom: 25px;
-    }
     .btn {
-        background-color: #e4e6e7;
+        background-color: #e4e4e7;
         color: #292929;
         margin: 5px;
     }
+    .bottom-btn {
+        margin-right: 25px;
+    }
+    button:active, button:focus, .btn:active, .btn:focus {
+        color: #292929;
+    }
     .text-center {
-        /* for the div that surrounds images */
         margin-bottom: 25px;
     }
     .img-fluid {
@@ -146,9 +133,13 @@ body {
         background-position: right top;
         background-repeat: no-repeat;
     }
-    /* .exercisesContainer {
+}
 
-    } */
+/* Small devices (landscape phones, 425px and up) */
+@media (min-width: 425px) {
+    .btn {
+        margin: 10px 30px;
+    }
 }
 
 /* Small devices (landscape phones, 576px and up) */
