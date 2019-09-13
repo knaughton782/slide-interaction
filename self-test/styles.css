@@ -12,20 +12,21 @@ body {
         min-height: 475px;
         position: relative;
         margin-bottom: 10px;
-        background-color: #97d7fc;
+        background-color: #97d7fc; 
+        /* slide background color: change as needed */
     }
     .slide-title {
         /* use background-color if you want title field to have a different color. Use margin and padding if using slide title */
-        /* background-color: #d3d8df;  */
+        background-color: #d3d8df; 
         color: #292929;
-        /* padding: 15px; */
-        /* margin: 15px 0; */
+        padding: 15px;
+        margin: 15px 0;
     }
     /* for slide title wording: font and spacing */
-    /* .title {
+    .title {
         font-size: 30px;
         padding: 10px 0 0 0;
-    } */
+    }
     /* for use if slide needs a background image instead of color */
     /* .background-image {
         background-image: url("");
@@ -63,6 +64,7 @@ body {
         background-color: #e4e4e7;
         color: #292929;
         margin: 5px;
+        margin-bottom: 25px;
     }
     .bottom-btn {
         margin-right: 25px;
