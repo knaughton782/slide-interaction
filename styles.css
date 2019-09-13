@@ -9,7 +9,7 @@ body {
 
     .slide {
         width: 100%;
-        min-height: 500px;
+        min-height: 475px;
         position: relative;
         margin-bottom: 10px;
         background-color: #97d7fc;
@@ -75,8 +75,12 @@ body {
     .img-fluid {
         margin: 10px auto;
     }
+    .answerDisplay {
+        min-height: 100px;
+    }
     .indent {
         margin-left: 25px;
+        margin-bottom: 20px;
     }
     .help {
         background-color: #CC444B;
@@ -84,7 +88,7 @@ body {
     .question {
         color: #292929;
         font-style: italic;
-        font-size: 1.08em;
+        font-size: 1.09em;
         margin-left: 25px;
     }
     .answer {

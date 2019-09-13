@@ -1,30 +1,35 @@
 $(document).ready(function () {
 
-  /** continue/back BUTTON FUNCTIONALITY  **/
 
-  /** HIDE ALL SLIDES EXCEPT CURRENT, starts with first slide **/
+  /** Hide ALL SLIDES EXCEPT CURRENT, starts with first slide. For development, comment out this section to see all the slides. **/
+
   $('.allSlides .slide').each(function (e) {
     if (e != 0) {
       $(this).hide();
     }
-  });
+  }); 
 
+  // end hide slide functionality
+
+
+/** continue/back BUTTON FUNCTIONALITY  **/
   // for each click on the continue button, hide the current slide and show the next one
   $('.continue').click(function () {
     if ($('.allSlides .slide:visible').next().length != 0) {
-        $('.allSlides .slide:visible')
+      $('.allSlides .slide:visible')
         .next()
         .show()
         .prev()
         .hide();
-      
+
     } else {
       $('.allSlides .slide:visible').hide();
       $('.allSlides .slide:first').show(); //wraps around and shows first slide again
     }
-    $(".actionDisplay").hide();
-    $(".conditionDisplay").hide();
-    $(".criterionDisplay").hide();
+    // return to default state to hide answer information
+    $(".aDisplay").hide();
+    $(".bDisplay").hide();
+    $(".cDisplay").hide();
   });
 
   // for each click on the back button, hide the current slide and show the previous one
@@ -39,39 +44,40 @@ $(document).ready(function () {
       $('.allSlides .slide:visible').hide();
       $('.allSlides .slide:last').show();
     }
-    $(".actionDisplay").hide();
-    $(".conditionDisplay").hide();
-    $(".criterionDisplay").hide();
+    // return to default state to hide answer information
+    $(".aDisplay").hide();
+    $(".bDisplay").hide();
+    $(".cDisplay").hide();
   });
   /** END Back / Continue Button Functionality ****************/
 
 
   /****************** button content switching functionality ********************/
-  // default state shows no answers
-  $(".actionDisplay").hide();
-  $(".conditionDisplay").hide();
-  $(".criterionDisplay").hide();
+  // default state hides answer info
+  $(".aDisplay").hide();
+  $(".bDisplay").hide();
+  $(".cDisplay").hide();
 
-
+// shows the answer info when the button is clicked
   $('.btn').click(function () {
     switch (true) {
-      case $(this).hasClass('action'):
-        $(".actionDisplay").show();
-        $(".conditionDisplay").hide();
-        $(".criterionDisplay").hide();
+      case $(this).hasClass('aaa'):
+        $(".aDisplay").show();
+        $(".bDisplay").hide();
+        $(".cDisplay").hide();
         break;
-      case $(this).hasClass('condition'):
-        $(".actionDisplay").hide();
-        $(".conditionDisplay").show();
-        $(".criterionDisplay").hide();
+      case $(this).hasClass('bbb'):
+        $(".aDisplay").hide();
+        $(".bDisplay").show();
+        $(".cDisplay").hide();
         break;
-      case $(this).hasClass('criterion'):
-        $(".actionDisplay").hide();
-        $(".conditionDisplay").hide();
-        $(".criterionDisplay").show();
+      case $(this).hasClass('ccc'):
+        $(".aDisplay").hide();
+        $(".bDisplay").hide();
+        $(".cDisplay").show();
         break;
     }
   })
-  /****************** end content switching ********************/
+  /****************** end content display ********************/
 
 }); // jquery end tag
